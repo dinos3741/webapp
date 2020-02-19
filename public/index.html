@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>My Basic Web App</title>
+
+	<!-- include the P5 library CDN: -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+
+	<!-- run bubble script: -->
+	<script src="client.js"></script>
+
+	<!-- check if goelocation is available: -->
+	<script>
+	if (!navigator.geolocation) {
+    	console.log('Geolocation is not supported by your browser');
+  	} else {
+    	console.log('Geolocation is supported by your browser');
+    	// callback routine returns position argument:
+    	navigator.geolocation.getCurrentPosition(position => {
+    		console.log(position.coords);	
+    	});	
+  	}
+	</script>
+</head>
+
+<body>
+	<h1>Welcome to my basic server!</h1>
+	
+	<p>	Hello world! This is my first interactive homepage with javascript content as well as 
+		some other graphic stuff. 
+	</p>
+	
+
+</body>
+</html>
